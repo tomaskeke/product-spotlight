@@ -319,6 +319,7 @@ p, a {
     flex-direction: row;
     gap: 16px;
     width: 100%;
+    height: auto;
   }
   .top-list__image-container {
     max-height: 128px;
