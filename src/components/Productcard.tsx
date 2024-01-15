@@ -1,9 +1,16 @@
-import {useState} from "react";
+import React, {useState} from "react";
+import {Product} from "../App.tsx";
 
-export const Productcard = ({product, first}) => {
+
+
+type ProductcardTypes = {
+    product: Product,
+    first: number,
+}
+export const Productcard = ({product, first}: ProductcardTypes) => {
     const [favorite, setFavorite] = useState(false);
 
-    const handleFavoriteClick = (event) => {
+    const handleFavoriteClick = (event: React.MouseEvent<HTMLSpanElement>) => {
         event.stopPropagation();
         event.preventDefault();
         setFavorite(!favorite);
